@@ -28,10 +28,7 @@ public class IndexController {
             filterChain.addFilter(filterChain1);
 
             msgProcessor.setFilterChain(filterChain);
-
-            String result = msgProcessor.process();
-            System.out.println(result);
-            model.addAttribute("result", result);
+            model.addAttribute("result", msgProcessor.process());
         }else {
             model.addAttribute("result", "此处显示过滤结果");
         }
